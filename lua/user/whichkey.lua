@@ -10,10 +10,7 @@ function M.config()
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["e"] = { "<cmd>NvimTreeToggle<CR>", "Explorer" },
-    b = {
-      name = "Buffers",
-      b = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
-    },
+    b = { "<cmd>Telescope buffers previewer=false<cr>", "Find" },
     d = {
       name = "Debug",
       t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
