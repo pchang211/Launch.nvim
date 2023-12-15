@@ -99,6 +99,10 @@ function M.config()
         error = icons.diagnostics.BoldError,
       },
     },
+    view = {
+      adaptive_size = true,
+      side = "left",
+    },
   }
 end
 

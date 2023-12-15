@@ -11,10 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup {
+require("lazy").setup({
   spec = LAZY_PLUGIN_SPEC,
   install = {
-    colorscheme = { "primer_dark", "habamax" },
+    colorscheme = { "gruvbox", "primer_dark", "habamax" },
   },
   ui = {
     border = "rounded",
@@ -23,4 +23,4 @@ require("lazy").setup {
     enabled = true,
     notify = false,
   },
-}
+})
