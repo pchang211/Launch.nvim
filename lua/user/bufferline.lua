@@ -1,7 +1,7 @@
 local M = {
   "akinsho/bufferline.nvim",
   dependencies = 'nvim-tree/nvim-web-devicons',
-  lazy = true,
+  lazy = false,
 }
 
 function M.config()
@@ -16,8 +16,8 @@ function M.config()
       -- and so changing this is NOT recommended, this is intended
       -- as an escape hatch for people who cannot bear it for whatever reason
       indicator_icon = "▎",
-      buffer_close_icon = "",
-      -- buffer_close_icon = '',
+      -- buffer_close_icon = "",
+      buffer_close_icon = '',
       modified_icon = "●",
       close_icon = "",
       -- close_icon = '',
