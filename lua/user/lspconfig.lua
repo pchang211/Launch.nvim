@@ -60,6 +60,8 @@ function M.config()
     "yamlls",
     "marksman",
     "tailwindcss",
+    "elixirls",
+    "gopls",
   }
 
   local default_diagnostic_config = {
@@ -101,6 +103,10 @@ function M.config()
       on_attach = M.on_attach,
       capabilities = M.common_capabilities(),
     }
+
+    if server == "elixirls" then
+      opts = vim.tbl_extend("keep", opts, { cmd = {"/Users/pfchang/.local/share/nvim/mason/bin/elixir-ls"} })
+    end
 
     local require_ok, settings = pcall(require, "user.lspsettings." .. server)
     if require_ok then
