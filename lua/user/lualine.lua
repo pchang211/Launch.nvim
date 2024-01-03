@@ -12,6 +12,10 @@ function M.config()
     colored = true,
     symbols = { added = icons.git.LineAdded, modified = icons.git.LineModified, removed = icons.git.LineRemoved }, -- Changes the symbols used by the diff.
   }
+  local filename = {
+    "filename",
+    path = 1,
+  }
 
   local copilot = function()
     local buf_clients = vim.lsp.get_active_clients { bufnr = 0 }
@@ -44,6 +48,7 @@ function M.config()
       -- section_separators = { left = "", right = "" },
       component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
+      theme = "everforest",
 
       ignore_focus = { "NvimTree" },
     },
@@ -56,7 +61,7 @@ function M.config()
       -- lualine_z = { "progress" },
       lualine_a = { "mode" },
       lualine_b = { "branch" },
-      lualine_c = { diff },
+      lualine_c = { filename, diff },
       lualine_x = { "diagnostics", copilot },
       lualine_y = { "filetype" },
       lualine_z = { "progress" },
