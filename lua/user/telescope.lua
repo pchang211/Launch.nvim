@@ -62,7 +62,8 @@ function M.config()
 
       find_files = {
         theme = "dropdown",
-        previewer = false,
+        previewer = true,
+        layout_config = { width = 0.7 },
       },
 
       buffers = {
