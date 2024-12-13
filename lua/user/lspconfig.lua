@@ -62,6 +62,7 @@ function M.config()
     "tailwindcss",
     "elixirls",
     "gopls",
+    "ruby_ls",
   }
 
   local default_diagnostic_config = {

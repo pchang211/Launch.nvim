@@ -22,6 +22,7 @@ M.servers = {
   "tailwindcss",
   "elixirls",
   "gopls",
+  "ruby_lsp",
 }
 
 function M.config()
