@@ -5,12 +5,14 @@ local M = {
     "neovim/nvim-lspconfig",
     "nvim-treesitter/nvim-treesitter",
   },
-  lazy = false,
+  lazy = true,
 }
 
 
 function M.config()
-  require("go").setup()
+  require("go").setup({
+    max_line_len=500,
+  })
 end
 
 return M

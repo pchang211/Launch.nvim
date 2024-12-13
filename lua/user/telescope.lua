@@ -1,8 +1,7 @@
 local M = {
   "nvim-telescope/telescope.nvim",
   dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true } },
-  commit = "74ce793a60759e3db0d265174f137fb627430355",
-  lazy = true,
+  tag = '0.1.8',
   cmd = "Telescope",
 }
 
@@ -54,10 +53,14 @@ function M.config()
     pickers = {
       live_grep = {
         theme = "dropdown",
+        previewer = true,
+        layout_config = { width = 0.7 },
       },
 
       grep_string = {
         theme = "dropdown",
+        previewer = true,
+        layout_config = { width = 0.7 },
       },
 
       find_files = {
@@ -68,7 +71,7 @@ function M.config()
 
       buffers = {
         theme = "dropdown",
-        previewer = false,
+        previewer = true,
         initial_mode = "normal",
         mappings = {
           i = {

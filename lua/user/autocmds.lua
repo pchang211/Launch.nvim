@@ -60,9 +60,17 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "typescript" },
+  callback = function()
+    vim.opt.expandtab = false
+  end,
+})
+
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.go" },
   callback = function()
-    vim.cmd ":GoFmt"
+    -- vim.cmd ":GoFmt"
+    require("go.format").gofmt()
   end,
 })
