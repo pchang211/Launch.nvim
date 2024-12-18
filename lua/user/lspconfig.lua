@@ -1,7 +1,7 @@
 local M = {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
-  commit = "e49b1e90c1781ce372013de3fa93a91ea29fc34a",
+  tag = "v1.1.0",
   dependencies = {
     {
       "folke/neodev.nvim",
@@ -52,7 +52,7 @@ function M.config()
     "lua_ls",
     "cssls",
     "html",
-    "tsserver",
+    "ts_ls",
     "astro",
     "pyright",
     "bashls",
@@ -62,7 +62,7 @@ function M.config()
     "tailwindcss",
     "elixirls",
     "gopls",
-    "ruby_ls",
+    -- "ruby_ls",
   }
 
   local default_diagnostic_config = {

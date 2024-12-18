@@ -1,13 +1,14 @@
 local M = {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPost", "BufNewFile" },
-  commit = "afa103385a2b5ef060596ed822ef63276ae88016",
+  -- commit = "afa103385a2b5ef060596ed822ef63276ae88016",
+  tag = "v0.9.3",
   build = ":TSUpdate",
   dependencies = {
     {
       "nvim-treesitter/nvim-treesitter-textobjects",
       event = "VeryLazy",
-      commit = "78c49ca7d2f7ccba2115c11422c037713c978ad1",
+      commit = "ad8f0a472148c3e0ae9851e26a722ee4e29b1595",
     },
     {
       "JoosepAlviste/nvim-ts-context-commentstring",
@@ -28,6 +29,7 @@ local M = {
 }
 function M.config()
   require("nvim-treesitter.configs").setup {
+    auto_install = true,
     ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "elixir", "go", "javascript", "typescript" }, -- put the language you want in this array
     ignore_install = { "" },
     sync_install = false,
