@@ -71,6 +71,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.go" },
   callback = function()
     -- vim.cmd ":GoFmt"
-    require("go.format").gofmt()
+    -- require("go.format").gofmt()
+    -- vim.cmd ":GoImport"
+    require("go.format").goimports()
   end,
 })

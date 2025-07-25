@@ -1,7 +1,8 @@
 local M = {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
-  commit = "d3a3056204e1a9dbb7c7fe36c114dc43b681768c",
+  tag = "v0.0.2",
+  -- commit = "d3a3056204e1a9dbb7c7fe36c114dc43b681768c",
   dependencies = {
     {
       "hrsh7th/cmp-nvim-lsp",
@@ -36,10 +37,7 @@ local M = {
     {
       "L3MON4D3/LuaSnip",
       event = "InsertEnter",
-      commit = "80a8528f084a97b624ae443a6f50ff8074ba486b",
-      dependencies = {
-        "rafamadriz/friendly-snippets",
-      },
+      tag = "v2.4.0",
     },
     {
       "hrsh7th/cmp-nvim-lua",
